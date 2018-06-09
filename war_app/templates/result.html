@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div>
+    <br>
+    <a href="{% url 'index' %}" class="btn btn-dark">Back</a>
+    <br><br>
+    <h1>Fight starts!</h1>
+    <ul class="list-group">
+        {% for i in process %}
+        <p></p>
+            <li class="list-group-item">{{ i }}</li>
+        {% endfor %}
+    </ul>
+    <br>
+    <div class="alert alert-primary" role="alert">
+    <h3>{{ winner }} win!!!</h3>
+    </div>
+</div>
+{% endblock %}

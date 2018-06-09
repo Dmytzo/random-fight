@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <br><br><br><br>
+    <div style="text-align: center">
+        <h1>Select type of the game</h1>
+        <br>
+        <a href="{% url 'fight' %}" class="btn btn-danger">Fight</a>
+        <a href="{% url 'war' %}" class="btn btn-danger">War</a>
+    </div>
+{% endblock %}
