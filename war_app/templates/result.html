@@ -8,7 +8,11 @@
     <ul class="list-group">
         {% for i in process %}
         <p></p>
-            <li class="list-group-item">{{ i }}</li>
+            <li class="list-group-item
+            {% if 'killed' in i %}
+            list-group-item-danger
+            {% endif %}
+            ">{{ i }}</li>
         {% endfor %}
     </ul>
     <br>

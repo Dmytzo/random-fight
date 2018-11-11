@@ -20,7 +20,7 @@ from war_app import views as war_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('fight/', war_views.fight, name='fight'),
+    path('fight/<int:number>/', war_views.fight, name='fight'),
     path('war/', war_views.war, name='war'),
     path('', war_views.index, name='index'),
 ]

@@ -7,14 +7,20 @@
     <br>
 <form method="POST">
     {% csrf_token %}
-    <div class="form-group">
-        <label for="w1">Please enter name for Warrior 1</label>
-        <input title="w1" type="text" name="w1" class="form-control">
-    </div>
-     <div class="form-group">
-        <label for="w2">Please enter name for Warrior 2</label>
-        <input title="w2" type="text" name="w2" class="form-control">
-    </div>
+    {% for i in range %}
+        <div class="form-group">
+            <label for="w{{ i }}">Please enter name for Warrior {{ i }}</label>
+            <input title="w{{ i }}" type="text" name="w" class="form-control">
+        </div>
+    {% endfor %}
+{#    <div class="form-group">#}
+{#        <label for="w1">Please enter name for Warrior 1</label>#}
+{#        <input title="w1" type="text" name="w1" class="form-control">#}
+{#    </div>#}
+{#     <div class="form-group">#}
+{#        <label for="w2">Please enter name for Warrior 2</label>#}
+{#        <input title="w2" type="text" name="w2" class="form-control">#}
+{#    </div>#}
 
     <button type="submit" class="btn btn-danger btn-lg btn-block">Fight!!!</button>
 </form>
